@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head >
+    <meta charset="UTF-8" >
+    <title>BenBen</title >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/comment.css" >
+    <script src="./js/common.js"></script>
+</head >
+<body >
+<div class="header clear header2" id="header">
+    <div class="close-btn" id="close"></div>
+    <span class="icon-logo"></span>
+    <i class="down-app-title">BenBen</i>
+    <a class="open-app" :href="this.$var.downloadURL" target="_blank">立即下载</a>
+</div>
+<div class="comment">
+    <div class="comment-main">
+        <div class="info">
+            <img src="./img/img_test.png" alt="">
+            <div>
+                <p class="name">纸人的日记</p>
+                <p class="time">10分钟前</p>
+            </div>
+        </div>
+        <p class="topic"><span>#这里是话题# </span>这里复古风爱好者，想买一些复古风的美到炸的装饰统统都有哦～<span>@木木</span></p>
+        <ul class="Img" id="Imglist">
+            <li>
+                <div>
+                    <img src="./img/img_test.png">
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="./img/tetst.jpg">
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="./img/login-bg.png">
+                </div>
+            </li>
+        </ul>
+        <p class="details"><span class="details-pinlun">147</span><span class="details-zan">4596</span><span class="details-share"></span></p>
+    </div>
+    <div class="line"></div>
+    <div class="comment-list">
+        <h3>评论（3）</h3>
+        <ul>
+            <li>
+                <img src="./img/img_test.png">
+                <div class="comment-list-detail">
+                    <h2>纸人的日记<b>1496</b></h2>
+                    <p>真的很美，非常漂真的很美，非常漂亮真的很没美，非常漂亮真的很美，非常漂真的很美～</p>
+                    <span>10分钟前</span><span>回复(1286)</span>
+                </div>
+            </li>
+            <li>
+                <img src="./img/img_test.png">
+                <div class="comment-list-detail">
+                    <h2>纸人的日记<b>1496</b></h2>
+                    <p>真的很美，非常漂真的很美，非常漂亮真的很没美，非常漂亮真的很美，非常漂真的很美～</p>
+                    <span>10分钟前</span><span>回复(1286)</span>
+                </div>
+            </li>
+            <li>
+                <img src="./img/img_test.png">
+                <div class="comment-list-detail">
+                    <h2>纸人的日记<b>1496</b></h2>
+                    <p>真的很美，非常漂真的很美，非常漂亮真的很没美，非常漂亮真的很美，非常漂真的很美～</p>
+                    <span>10分钟前</span><span>回复(1286)</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <a class="foot" href="this.$var.downloadURL" target="_blank">打开APP，看更多精彩内容</a>
+</div>
+</body >
+</html >
+<script>
+    var oClose = document.getElementById("close")
+    var oHeader = document.getElementById("header")
+    oClose.onclick= function(){
+        oHeader.style.display = 'none'
+    }
+
+    var oImglist = document.getElementById("Imglist").children.length
+    if(oImglist == 1){
+        document.getElementById("Imglist").className = 'Img';
+    } else if(oImglist == 2){
+        document.getElementById("Imglist").className = 'Img2';
+    } else if(oImglist == 4){
+        document.getElementById("Imglist").className = 'Img4';
+    } else if(oImglist > 9){
+        document.getElementById("Imglist").className = 'Imgother';
+        document.getElementById("Imglist").style.height = '6.4rem';
+    }else {
+        document.getElementById("Imglist").className = 'Imgother';
+    }
+
+</script>
